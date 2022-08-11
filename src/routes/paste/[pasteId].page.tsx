@@ -18,11 +18,11 @@ export default function ResultPage({ params }: PageProps) {
             <section>
                 <strong><p>Paste Data</p></strong>
                 <fieldset>
-                    <textarea className="textarea" rows={20} value={query.data} readOnly></textarea>
+                    <textarea className="textarea" rows={15} value={query.data} readOnly></textarea>
                 </fieldset>
             </section>
             <section>
-                <strong><p>Paste Data as Code Block</p></strong>
+                <strong><p>Pre-formatted Paste Data</p></strong>
                 <pre>
                     <code>{query.data}</code>
                 </pre>

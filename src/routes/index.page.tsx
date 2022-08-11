@@ -30,10 +30,10 @@ export default function HomePage() {
             </section>
             <section>
                 <form method="post">
-                    <fieldset>
-                        <textarea name="postData" className="textarea" placeholder="Paste your info here" required></textarea>
-                        <button className="button" type="submit">Submit</button>
+                    <fieldset> 
+                        <textarea name="postData" rows={15} className="textarea" placeholder="Paste your info here" required></textarea>
                     </fieldset>
+                    <button className="button" type="submit">Submit</button>
                 </form>
             </section>
         </>

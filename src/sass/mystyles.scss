@@ -1,0 +1,19 @@
+@import "../../node_modules/milligram/src/_Color.sass";
+@import "../../node_modules/milligram/src/_Base.sass";
+@import "../../node_modules/milligram/src/_Spacing.sass";
+@import "../../node_modules/milligram/src/_Typography.sass";
+@import "../../node_modules/milligram/src/_Link.sass";
+@import "../../node_modules/milligram/src/_Grid.sass";
+@import "../../node_modules/milligram/src/_Code.sass";
+@import "../../node_modules/milligram/src/_Button.sass";
+
+.textarea, .textarea::selection {
+    display: block;
+    border: none;
+    outline: none;
+    resize: vertical;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
