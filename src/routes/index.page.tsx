@@ -24,20 +24,16 @@ export default function HomePage() {
 
 	return (
 		<>
-            <section className="hero is-info mt-4">
-                <div className="hero-body">
-                    <h1 className="title">Basedbin</h1>
-                    <p>By CM-IV</p>
-                </div>
+            <section>
+                <h1 className="title">Basedbin</h1>
+                <p>By CM-IV</p>
             </section>
-            <section className="section">
+            <section>
                 <form method="post">
-                    <div className="field">
-                        <textarea name="postData" className="textarea has-fixed-size" placeholder="Paste your info here" rows={20} required></textarea>
-                    </div>
-                    <div className="field">
+                    <fieldset>
+                        <textarea name="postData" className="textarea" placeholder="Paste your info here" required></textarea>
                         <button className="button" type="submit">Submit</button>
-                    </div>
+                    </fieldset>
                 </form>
             </section>
         </>

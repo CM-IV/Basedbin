@@ -1,0 +1,9 @@
+@import "../../node_modules/milligram/dist/milligram.min.css";
+
+* {
+    box-sizing: border-box;
+}
+
+.textarea {
+    resize: vertical;
+}

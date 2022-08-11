@@ -1,4 +1,4 @@
-import { PageProps, useServerSideQuery } from "rakkasjs";
+import { Link, PageProps, useServerSideQuery } from "rakkasjs";
 import { db } from "src/data/db";
 
 export default function ResultPage({ params }: PageProps) {
@@ -12,20 +12,25 @@ export default function ResultPage({ params }: PageProps) {
 
 	return (
 		<>
-            <section className="hero is-info mt-4">
-                <div className="hero-body">
-                    <h1 className="title">Result</h1>
-                </div>
+            <section>
+                <h1>Result</h1>
             </section>
-            <section className="section">
-                <h2 className="subtitle">Paste Data</h2>
-                <div className="control">
-                    <textarea className="textarea has-fixed-size" rows={20} value={query.data} readOnly></textarea>
-                </div>
+            <section>
+                <strong><p>Paste Data</p></strong>
+                <fieldset>
+                    <textarea className="textarea" rows={20} value={query.data} readOnly></textarea>
+                </fieldset>
             </section>
-            <section className="section">
-                <h2 className="subtitle">Pre-formatted Paste Data</h2>
-                <pre>{query.data}</pre>
+            <section>
+                <strong><p>Paste Data as Code Block</p></strong>
+                <pre>
+                    <code>{query.data}</code>
+                </pre>
+            </section>
+            <section>
+                <Link href="/">
+                    <button className="button button-outline">Add a Paste</button>
+                </Link>
             </section>
         </>
 	);
