@@ -11,6 +11,8 @@ if (result && !result.error) {
 	const pasteId = result.data as FormInfo;
 	console.log(pasteId.id)
   	return Astro.redirect(`/paste/${pasteId.id}`);
+} else {
+	console.log(result?.error)
 }
 
 import Layout from '../layouts/Layout.astro';
