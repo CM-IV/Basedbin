@@ -1,0 +1,15 @@
+---
+import { db, Paste, sql } from 'astro:db';
+import Layout from '../../layouts/Layout.astro';
+
+const { pasteId } = Astro.params;
+
+const pasteInfo = await db.select().from(Paste).where(sql`${Paste.id} = ${pasteId}`);
+
+---
+<Layout title="Based Bin">
+	<h1>Your Paste</h1>
+    <textarea name="paste" class="textarea" rows="30" cols="80" readonly>{pasteInfo[0].paste}</textarea>
+    <br>
+    <button type="button" onclick="window.location.href='/'">Paste Another</button>
+</Layout>
