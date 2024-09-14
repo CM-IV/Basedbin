@@ -17,10 +17,8 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Based Bin">
-	<header>
+	<main class="container">
 		<h1>Based Bin</h1>
-	</header>
-	<main class="container-fluid">
 		<form method="post" action={actions.pasteInfo}>
 			<fieldset>
 				<textarea name="paste" placeholder="Paste your stuff here" class="textarea" rows="30" />
